@@ -69,7 +69,6 @@ def dogs():
     url=requests.get('https://dog.ceo/api/breeds/image/random')
     image=json.loads(url.text)
     imglist.append([i+1,image['message']]) 
-    #imglist = [ [1,'xxxxx'], [2,'BBBBB'] ]  total = n
   return render_template('dogs.html', data=imglist, total=n)
 
 if __name__ == '__main__':
